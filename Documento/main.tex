@@ -1,14 +1,16 @@
-\documentclass[12pt,letterpaper,openany,oneside]{book}
-\usepackage[utf8]{inputenc}
-\usepackage[spanish]{babel}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{subcaption}
-\usepackage[left=3cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
-\usepackage{color}
+% Tipo de letra Times New Roman, 12 puntos y tamaño carta
+    \documentclass[12pt,letterpaper,openany,oneside]{book}
+    \usepackage{natbib}
+    \bibliographystyle{apalike2}
+    \usepackage[T1]{fontenc}
+    \usepackage{times}
+    \usepackage[utf8]{inputenc}
+    \usepackage[spanish]{babel}
+    \renewcommand{\baselinestretch}{1.6}
+%Margen superior 4cm, inferior 2.5 cm, margen izquierdo 4 cm y derecho 2.5 cm para todo el documento
+    \usepackage[left=4cm,right=2.5cm,top=4cm,bottom=2.5cm]{geometry}
+
+
 \usepackage{xcolor}
     \definecolor{azul}{rgb}{0.17,0.49,0.69}
     \definecolor{gris}{gray}{0.875}
@@ -22,9 +24,6 @@
 	citecolor=azul,
 }
 
-\usepackage{natbib}
-	\bibliographystyle{apalike2}
-
 %----------------Contorno
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -36,61 +35,43 @@
 	\rfoot[]{\thepage}
 	\cfoot[]{}
 
-%----------------Interlineado--------
-\usepackage{setspace}
-%---- Doble
-%\doublespacing
-%----- Uno y medio
-%\onehalfspace
-%----- Simple
-%\singlespace
-%----- Revisión
-%\spacing{3.0}
 
-%Tipografía Times New Roman, 
-\usepackage[T1]{fontenc}
-\usepackage{times}
+
 
 \usepackage{appendix}
-
-
 \usepackage{lipsum}
+
+
 \begin{document}
-	%------------------------------------PRELIMINARES--------------------------------
+%Estructura del documento
+	%----------------------------------PRELIMINARES
 	\frontmatter
-	\doublespacing 
-	%PRELIMINARES
 	\input{Preliminares/1.Portada}
 	\input{Preliminares/2.Calificaciones}
-	\onehalfspace
 	\input{Preliminares/3.Dedicatoria}
 	\input{Preliminares/4.Agradecimientos}
-	%-------------------------------------Indices----------------------------------
-	\singlespace
-	\tableofcontents
-	%\spacing{2.5}
+    %Tabla de contenido
+	    \tableofcontents
+	%Índice de figuras
 		\listoffigures
+	%Índice de tablas
 		\listoftables
-	%-----------------------------------------------------------------------------
-	%Resumen Es-En
-	\include{Preliminares/5.ResumenAbstract}
+	%Resumen en español e ingles y palabras clave
+	\input{Preliminares/5.ResumenAbstract}
 	
-	%------------------------------------TEXTO---------------------------------
-	\doublespacing
+	%------------------------------------TEXTO
 	\mainmatter
+	
 	\input{Capítulos/1.Introduccion}
 	\input{Capítulos/2.RevisionLiteratura}
 	\input{Capítulos/3.Metodologia}
 	\input{Capítulos/4.AnalisisResultados}
-	\input{Capítulos/5.ConclusionesMIInvestigacionesFuturas}
+	\input{Capítulos/5.ConclusionesInvestigacionesFuturas}
 	
 	%------------------------------------REFERENCIAS--------------------------------
 	\backmatter
-	\onehalfspace
-
-    \bibliography{Biliografia}
+    \bibliography{Bibliografia}
 	\addcontentsline{toc}{chapter}{BIBLIOGRAFÍA}
-	\singlespace		
 	\appendix
 	\input{Apendices}
 \end{document}
