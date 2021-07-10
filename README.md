@@ -3,7 +3,7 @@ _En este repositorio podras encontrar la planilla para realizar tu tesis o proye
 
 Esta plantilla esta basada en el [Manual de presentación de trabajos finales de las diferentes modalidades de graducación](http://industrial.umsa.bo/documents/184826/324171/Reglamento%20Presentaci%C3%B3n%20Tesis%20ProyectoGRado%20TrabajoDirigido "Manual de presentación de trabajos finales de las diferentes modalidades de graducación") de la Universidad Mayor de San Andrés, Bolivia.
 
-##Recomendaciones 📋
+## Recomendaciones 📋
 Se recomienda utilizar [Overleaf](https://www.overleaf.com/ "Overleaf") para compilar su documento, ya que se desarrolo en el mismo.
 
 ## Licencia 📄
